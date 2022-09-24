@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.nav{
+  background-color: black;
+  color: white;
+  height: 4rem;
+
+}
+.nav a{
+  height: 4rem;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
