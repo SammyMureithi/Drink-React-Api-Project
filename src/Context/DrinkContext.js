@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 const { Consumer, Provider } = createContext();
 function DrinkContext( props ) {
     const [allDrinks, setAllDrinks] = useState( [] );
-    const [searchLetter, setSearchLetter] = useState( "" );
+    const [searchLetter, setSearchLetter] = useState( "a" );
     
     useEffect( () => {
         fetch( `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${searchLetter}` )
@@ -24,7 +24,7 @@ function DrinkContext( props ) {
     console.log( allDrinks );
   return (
       <div>
-          <Provider value={{ name: "Mure", letterChange: handleLetterChange, searchLetter: searchLetter }}>
+          <Provider value={{ name: "Mure", letterChange: handleLetterChange, searchLetter: searchLetter,allDrinks:allDrinks }}>
           <input type={"text"} placeholder="Drink starting with ..."
               onChange={handleLetterChange} value={searchLetter} />
               {props.children}

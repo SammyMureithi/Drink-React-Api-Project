@@ -34,5 +34,14 @@ code {
   transform: translate(50%,50%);
   max-width: 50vw;
 }
+.drinks{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.drinks img{
+  width: 25vw;
+}
 
 
