@@ -1,8 +1,15 @@
 import React from 'react'
+import { DrinkConsumer } from '../Context/DrinkContext'
 
 function Coctail() {
   return (
-    <div>Coctail</div>
+    <DrinkConsumer>
+      {Context => {
+        return (
+          <h1>CockTail by {Context.name}</h1>
+        )
+      }}
+    </DrinkConsumer>
   )
 }
 
