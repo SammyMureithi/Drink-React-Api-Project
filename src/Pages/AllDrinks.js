@@ -14,7 +14,7 @@ function AllDrinks() {
       {Context => {
         const filterdData=Context.allDrinks.filter(element => element.strDrink.includes(search))
         const Drink = filterdData.map( element => <div key={element.idDrink + element.strDrink} >
-          <img src={element.strDrinkThumb} alt="img-Drinks" onClick={()=>navigation(`all-drinks/detailed/${element.idDrink}`)}/>
+          <img src={element.strDrinkThumb} alt="img-Drinks" onClick={()=>navigation(`detailed/${element.idDrink}`)}/>
           <h1>{element.strDrink}</h1>
         </div> )
         return (

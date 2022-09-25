@@ -13,10 +13,10 @@ function App() {
         <Route path='/' element={<HomePages/>}>
           <Route index  element={<AllDrinks />} />
           <Route path='all-drinks' element={<AllDrinks />}/>
-            <Route path='all-drinks/detailed/:drinkID' element={<DetailDrinks/>}/>
-          
+            
           <Route path='cocktail' element={<Coctail/>}/>
         </Route>
+        <Route path='detailed/:drinkID' element={<DetailDrinks/>}/>
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </div>
